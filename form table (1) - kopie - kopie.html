@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TV dotazník</title>
+    <!-- Stylopisy mùžete umístit sem nebo v externím souboru. -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="radio"],
+        input[type="checkbox"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>TV dotazník</h1>
+    <form action="" method="post">
+        <label for="jmeno">Jméno a pøíjmení</label>
+        <input type="text" id="jmeno" name="jmeno" required>
+
+        <label for="vek">Kolik vám je let?</label>
+        <input type="radio" id="vek18" name="vek" value="18" required>
+        <label for="vek18">18 a ménì</label>
+        <input type="radio" id="vek19" name="vek" value="19" required>
+        <label for="vek19">19 až 64</label>
+        <input type="radio" id="vek65" name="vek" value="65" required>
+        <label for="vek65">65 a více</label>
+
+        <label>V jakých zaøízení sledujete ÈT?</label>
+        <input type="checkbox" id="tvTelevize" name="tv[]" value="Televize" required>
+        <label for="tvTelevize">Televize</label>
+        <input type="checkbox" id="tvPocitac" name="tv[]" value="Poèítaè" required>
+        <label for="tvPocitac">Poèítaè</label>
+        <input type="checkbox" id="tvMobil" name="tv[]" value="Mobil" required>
+        <label for="tvMobil">Mobil</label>
+
+        <label for="libi">Co se vám líbí na TV?</label>
+        <textarea id="libi" name="libi" rows="4" cols="50" required></textarea>
+
+        <label for="poplatky">Jakou výši poplatkù jste ochotni platit</label>
+        <input type="text" id="poplatky" name="poplatky" required>
+
+        <input type="submit" value="Odeslat">
+    </form>
+</body>
+</html>
